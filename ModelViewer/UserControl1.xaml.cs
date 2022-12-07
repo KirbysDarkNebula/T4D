@@ -365,7 +365,7 @@ namespace ModelViewer
             foreach (Point3D[] p in Points)
             {
                 addModel(@"models\Point.obj", "SelectedRail", p[0].ToVector3D(), new Vector3D(.5f, .5f, .5f), 0, 0, 0);
-                if (Points[0] != Points[1] || Points[0] != Points[2]) 
+                if (Points.Count > 1 && (Points[0] != Points[1] || Points[0] != Points[2])) 
                 {
                     LinesVisual3D l = new LinesVisual3D();
 
@@ -585,6 +585,12 @@ namespace ModelViewer
             if (Positions[Type].Count <= index) return;
             Vector3D pos = Positions[Type][index];
             Point3D point3 = new Point3D(Math.Truncate(pos.X * 100) / 100, Math.Truncate(pos.Y * 100) / 100, Math.Truncate(pos.Z * 100) / 100);
+            
+            if (Type == "AllRailInfos" && (Models["RailHandleRail"].Count == 0 || Models["SelectedRail"].Count == 1))
+            {
+                Type = "SelectedRail";
+                index = 0;
+            }
             point3 = Models[Type][index].FindBounds(Transform3D.Identity).Location;
             point3.X = point3.X + Models[Type][index].FindBounds(Transform3D.Identity).SizeX / 2;
             point3.Y = point3.Y + Models[Type][index].FindBounds(Transform3D.Identity).SizeY / 2;
