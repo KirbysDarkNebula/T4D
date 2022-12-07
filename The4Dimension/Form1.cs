@@ -2814,7 +2814,7 @@ namespace The4Dimension
                         { //adds the area to the file
                             FormEditors.FrmAddFogSettings f = new FormEditors.FrmAddFogSettings(FogParam, fogid, Scenario);
                             f.ShowDialog();
-                            SzsFiles[ParamFile] = f.fogparamfilenew.ToArray();
+                            if (f.fogparamfilenew != null) SzsFiles[ParamFile] = f.fogparamfilenew.ToArray();
                             SaveChangeLabel();
                         }
                     }
