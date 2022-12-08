@@ -324,16 +324,42 @@ namespace The4Dimension.BgmEditors
                         xr.WriteStartElement("A0");
                         xr.WriteAttributeString("Name", "BgmLabel");
                         xr.WriteAttributeString("StringValue", Levels[k]);
-                        if (k.Contains("SkyChikuwaStageMap2"))
+                        if (k.Contains("SkyChikuwaSp2Stage"))
                         {
                             xr.WriteEndElement();
                             xr.WriteStartElement("D1");
                             xr.WriteAttributeString("Name", "Scenario");
-                            xr.WriteAttributeString("StringValue", 2.ToString());
+                            xr.WriteAttributeString("StringValue", 1.ToString());
                             xr.WriteEndElement();
                             xr.WriteStartElement("A0");
                             xr.WriteAttributeString("Name", "StageName");
-                            xr.WriteAttributeString("StringValue", "SkyChikuwaSpStage");
+                            xr.WriteAttributeString("StringValue", "SkyChikuwaSp2Stage");
+                            xr.WriteEndElement();
+                            xr.WriteEndElement();
+                        }
+                        else if (k.Equals("SkyChikuwa"))
+                        {
+                            xr.WriteEndElement();
+                            xr.WriteStartElement("D1");
+                            xr.WriteAttributeString("Name", "Scenario");
+                            xr.WriteAttributeString("StringValue", 1.ToString());
+                            xr.WriteEndElement();
+                            xr.WriteStartElement("A0");
+                            xr.WriteAttributeString("Name", "StageName");
+                            xr.WriteAttributeString("StringValue", "SkyChikuwaSp2Stage");
+                            xr.WriteEndElement();
+                            xr.WriteEndElement();
+                        }
+                        else if (k.Contains("SkyChikuwaStageMap2"))
+                        {
+                            xr.WriteEndElement();
+                            xr.WriteStartElement("D1");
+                            xr.WriteAttributeString("Name", "Scenario");
+                            xr.WriteAttributeString("StringValue", 1.ToString());
+                            xr.WriteEndElement();
+                            xr.WriteStartElement("A0");
+                            xr.WriteAttributeString("Name", "StageName");
+                            xr.WriteAttributeString("StringValue", "SkyChikuwaSp2Stages");
                             xr.WriteEndElement();
                             xr.WriteEndElement();
                         }
@@ -356,7 +382,7 @@ namespace The4Dimension.BgmEditors
                     xr.WriteEndElement();
                     xr.Close();
                 }
-                    Clipboard.SetText(Form1.DefEnc.GetString(stream.ToArray()));
+                Clipboard.SetText(Form1.DefEnc.GetString(stream.ToArray()));
                 SzsFiles["StageDefaultBgmList.byml"] = BymlConverter.GetByml(Form1.DefEnc.GetString(stream.ToArray()));
             }
             CommonCompressors.YAZ0 y = new CommonCompressors.YAZ0();
@@ -370,7 +396,7 @@ namespace The4Dimension.BgmEditors
             }
             SzsArch.FromFileSystem(dir);
             File.WriteAllBytes(Properties.Settings.Default.UseLayeredFs ? Properties.Settings.Default.LayeredFSPath + "\\SoundData\\BgmTable.szs" : @"BgmTable.szs", y.Compress(SzsArch.Write()));
-            MessageBox.Show("File was saved properly! in " + (Properties.Settings.Default.UseLayeredFs ? Properties.Settings.Default.LayeredFSPath + "\\SoundData\\" : "this program's folder"));
+            MessageBox.Show("File was saved properly in " + (Properties.Settings.Default.UseLayeredFs ? Properties.Settings.Default.LayeredFSPath + "\\SoundData\\." : "this program's folder."));
             this.Close();
         }
 
