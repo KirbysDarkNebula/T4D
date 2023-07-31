@@ -152,51 +152,87 @@
         <op name="Red" value="5" />
       </option>
     </object>
-    <object id="Trampoline2x2M" name="Mushroom Trampoline2x2" category="1" type="1" extra="A Mushroom Trampoline">
+    <object id="Trampoline2x2M" name="Mushroom Trampoline 2x2" category="1" type="1" extra="A Mushroom Trampoline">
       <model>Trampoline2x2M</model>
-      <int arg="0" name="Jump Height" default="0" info="Changes how high mario jumps" />
+      <int arg="0" name="Jump Height" default="1" info="Changes how high mario jumps" />
       <int arg="3" name="???" default="0" info="Unknown" />
     </object>
     <object id="ViewCtrlArea" name="ViewCtrlArea" category="5" type="3" extra="An area that forces objects with the same ViewId as this area's Arg0 to load when Mario is in it">
-      <int arg="0" name="ViewId" default="0" info="ViewId that will be forced to show" />
+      <int arg="0" name="ViewId" default="0" info="ID that forces object to show" />
     </object>
-    <object id="PatanBoardStarter" name="Flip panel switch" category="1" type="1" extra="A switch that activates Flip panels.">
+    <object id="PatanBoardStarter" name="Flip Panel Switch" category="1" type="1" extra="A switch that activates Flip panels.">
       <model>PatanBoardStarter</model>
       <int arg="0" name="Time?" default="0" info="" />
     </object>
-    <object id="PatanBoard" name="Flip panel" category="1" type="1" extra="A panel that gets its next position set by its children.">
+    <object id="PatanBoard" name="Flip Panel" category="1" type="1" extra="A panel that gets its next position set by its children.">
       <model>PatanBoard</model>
       <int arg="0" name="Panel Timer" default="-1" info="A timer between panels?" />
       <int arg="1" name="Movement Speed" default="-1" info="Sets speed for the panels." />
     </object>
-    <object id="BlockQuestionLongCoin" name="3 Coin Long Question Block" category="1" type="1" extra="A long block that gives 3 coins upon being hit.">
+    <object id="BlockQuestionLongCoin" name="Long 3 Coin Question Block" category="1" type="1" extra="A long block that gives 3 coins upon being hit.">
       <model>BlockQuestionLong</model>
+      <bool arg="3" name="Has Snow" default="true" info="Adds snow ontop of the block" />
+      <bool arg="4" name="Disable Shadow" default="true" info="" />
+      <bool arg="5" name="Shadow Size" default="true" info="Determines shadow size of block." />
     </object>
     <object id="BlockBrickCoin" name="1 Coin Brick Block " category="1" type="1" extra="A brick that gives 1 coin upon being hit.">
       <model>BlockBrick</model>
+      <bool arg="3" name="Has Snow" default="true" info="Adds snow ontop of the block" />
+      <bool arg="4" name="Disable Shadow" default="true" info="" />
+      <int arg="5" name="Shadow Size" default="0" info="Determines shadow size of block." />
     </object>
     <object id="BlockQuestionCoin10" name="10 Coin Question Block" category="1" type="1" extra="A block that gives 10 coin upon being hit.">
       <model>BlockQuestion</model>
+      <bool arg="3" name="Has Snow" default="true" info="Adds snow ontop of the block" />
+      <bool arg="4" name="Disable Shadow" default="true" info="" />
+      <int arg="5" name="Shadow Size" default="0" info="Determines shadow size of block." />
     </object>
     <object id="BlockQuestionCoin" name="1 Coin Question Block" category="1" type="1" extra="A block that gives 1 coin upon being hit.">
       <model>BlockQuestion</model>
+      <bool arg="3" name="Has Snow" default="false" info="Adds snow ontop of the block" />
+      <bool arg="4" name="Disable Shadow" default="false" info="" />
+      <int arg="5" name="Shadow Size" default="0" info="Determines shadow size of block." />
     </object>
     <object id="BlockQuestionFireFlower" name="Fire Flower Question Block" category="1" type="1" extra="A block that gives a Fire Flower upon being hit.">
       <model>BlockQuestion</model>
-      <bool arg="7" name="Pop Out?" default="true" info="" />
+      <bool arg="3" name="Has Snow" default="true" info="Adds snow ontop of the block" />
+      <bool arg="4" name="Disable Shadow" default="true" info="" />
+      <int arg="5" name="Shadow Size" default="0" info="Determines shadow size of block" />
+      <option arg="7" name="Pop Out Direction" default="-1" info="Allows the item to pop out of the block.">
+        <op name="Spawns On Top Of Block" value="-1" />
+        <op name="Pop Out In Front" value="0" />
+        <op name="Pop Out To The Right" value="1" />
+        <op name="Pop Out Behind" value="2" />
+        <op name="Pop Out To The Left" value="3" />
+      </option>
     </object>
     <object id="BlockQuestionLongCoin10" name="10 Coin Long Question Block" category="1" type="1" extra="A long block that gives 10 coins upon being hit.">
       <model>BlockQuestionLong</model>
+      <bool arg="3" name="Has Snow" default="true" info="Adds snow ontop of the block" />
+      <bool arg="4" name="Disable Shadow" default="true" info="" />
+      <int arg="5" name="Shadow Size" default="0" info="Determines shadow size of block" />
     </object>
     <object id="BlockQuestionSuperLeaf" name="Tanooki Leaf Question Block" category="1" type="1" extra="A block that gives a Tanooki Leaf upon being hit.">
       <model>BlockQuestion</model>
-      <bool arg="7" name="Pop out?" default="true" info="" />
+      <bool arg="3" name="Has Snow" default="true" info="Adds snow ontop of the block" />
+      <bool arg="4" name="Disable Shadow" default="true" info="" />
+      <int arg="5" name="Shadow Size" default="0" info="Determines shadow size of block." />
+      <option arg="7" name="Pop Out Direction" default="-1" info="Allows the item to pop out of the block">
+        <op name="Spawn On Top Of Block" value="-1" />
+        <op name="Pop Out In Front" value="0" />
+        <op name="Pop Out To The Right" value="1" />
+        <op name="Pop Out Behind" value="2" />
+        <op name="Pop Out To The Left" value="3" />
+      </option>
     </object>
     <object id="WoodBoxPopCoin" name="1 Coin Wooden Crate" category="1" type="1" extra="A wooden crate when broken gives 1 coin.">
       <model>WoodBox</model>
     </object>
     <object id="BlockBrickCoin10" name="10 Coin Brick Block" category="1" type="1" extra="A brick that gives 10 coin upon being hit.">
       <model>BlockBrick</model>
+      <bool arg="3" name="Has Snow" default="true" info="Adds snow ontop of the block" />
+      <bool arg="4" name="Disable Shadow" default="true" info="" />
+      <int arg="5" name="Shadow Size" default="0" info="Determines shadow size of block" />
     </object>
     <object id="WoodBox" name="Wooden Crate" category="1" type="1" extra="A wooden crate.">
       <model>WoodBox</model>
@@ -204,17 +240,35 @@
     <object id="BlockNoteWide" name="Wide Noteblock" category="1" type="1" extra="A block that makes Mario jump up!">
       <model>BlockNoteWide</model>
       <bool arg="0" name="Keep Momentum" default="false" info="Momentum is kept when jumping on the block" />
-      <int arg="5" name="Shadow Size" default="0" info="" />
+      <int arg="5" name="Shadow Size" default="0" info="Determines shadow size of block." />
     </object>
     <object id="BlockQuestionBoomerangFlower" name="Boomerang Question Block" category="1" type="1" extra="A block that gives a Boomerang Flower upon being hit.">
       <model>BlockQuestion</model>
-      <bool arg="7" name="Pop Out?" default="true" info="" />
+      <bool arg="3" name="Has Snow" default="false" info="Adds snow ontop of the block" />
+      <bool arg="4" name="Disable Shadow" default="" info="" />
+      <int arg="5" name="Shadow Size" default="0" info="Determines shadow size of block." />
+      <option arg="7" name="Pop Out Direction" default="-1" info="Allows the item to pop out of the block">
+        <op name="Spawn On Top Of Block" value="-1" />
+        <op name="Pop Out In Front" value="0" />
+        <op name="Pop Out To The Right" value="1" />
+        <op name="Pop Out Behind" value="2" />
+        <op name="Pop Out To The Left" value="3" />
+      </option>
     </object>
     <object id="BlockQuestionLongBoomerangFlower" name="Long Boomerang Question Block" category="1" type="1" extra="A long Block that gives a Boomerang Flower upon being hit.">
-      <model>BlockQuestion</model>
-      <bool arg="7" name="Pop Out?" default="true" info="" />
+      <model>BlockQuestionLong</model>
+      <bool arg="3" name="Has Snow" default="true" info="Adds snow ontop of the block" />
+      <bool arg="4" name="Disable Shadow" default="true" info="" />
+      <int arg="5" name="Shadow Size" default="0" info="Determines shadow size of block." />
+      <option arg="7" name="Pop Out Direction" default="-1" info="Allows the item to pop out of the block">
+        <op name="Spawns On Top Of Block" value="-1" />
+        <op name="Pop Out In Front" value="0" />
+        <op name="Pop Out To The Right" value="1" />
+        <op name="Pop Out Behind" value="2" />
+        <op name="Pop Out To The Left" value="3" />
+      </option>
     </object>
-    <object id="TentenGenerator" name="Biddybuds" category="3" type="1" extra="Winged Biddybuds ">
+    <object id="TentenGenerator" name="Biddybuds" category="3" type="1" extra="Grounded Biddybuds ">
       <model>Tenten</model>
       <int arg="0" name="Amount" default="1" info="Amount that will spawn." />
       <int arg="1" name="Delay" default="0" info="" />
@@ -227,11 +281,11 @@
         <op name="Red" value="5" />
       </option>
     </object>
-    <object id="BlockRouletteFlying" name="Flying Roulette block" category="7" type="1" extra="A block that spawns after a certain number of deaths that changes the item it gives every few frames (Requires rail)">
+    <object id="BlockRouletteFlying" name="Flying Roulette Block" category="7" type="1" extra="A block that spawns after a certain number of deaths that changes the item it gives every few frames (Requires rail)">
       <model>BlockRouletteFlying</model>
       <int arg="1" name="Unknown" default="0" info="" />
       <int arg="2" name="No. of deaths required?" default="3" info="3" />
-      <int arg="7" name="Unknown 3" default="0" info="" />
+      <int arg="7" name="Unknown 2" default="0" info="" />
     </object>
     <object id="Bubble" name="Lava Bubble" category="3" type="1" extra="A lava bubble that jumps out of the lava">
       <model>Bubble</model>
@@ -273,7 +327,7 @@
     <object id="KuriboTail" name="Rail Tanooki Goomba" category="3" type="1" extra="A tanooki goomba whose movement is set by a rail">
       <model>KuriboTail</model>
     </object>
-    <object id="BlockRoulette" name="Roulette block" category="7" type="1" extra="A block that spawns after a certain number of deaths that changes the item it gives every few frames">
+    <object id="BlockRoulette" name="Roulette Block" category="7" type="1" extra="A block that spawns after a certain number of deaths that changes the item it gives every few frames">
       <model>BlockRoulette</model>
       <int arg="1" name="Unknown" default="0" info="" />
       <int arg="2" name="No. of deaths required?" default="3" info="3" />
@@ -284,9 +338,9 @@
       <int arg="2" name="Note lifetime" default="0" info="" />
       <int arg="3" name="Time between notes" default="0" info="" />
     </object>
-    <object id="Trampoline2x4M" name="Mushroom Trampoline2x4" category="1" type="1" extra="A Mushroom Trampoline">
+    <object id="Trampoline2x4M" name="Mushroom Trampoline 2x4" category="1" type="1" extra="A Mushroom Trampoline">
       <model>Trampoline2x2M</model>
-      <int arg="0" name="Jump Height" default="0" info="Changes how high mario jumps" />
+      <int arg="0" name="Jump Height" default="1" info="Changes how high mario jumps" />
       <int arg="3" name="???" default="0" info="Unknown" />
     </object>
     <object id="TrampleSwitch" name="P-Switch" category="1" type="1" extra="A switch that permanently activates the switch given by SwitchA">
@@ -305,7 +359,7 @@
     </object>
     <object id="BlockEmpty" name="Empty Block" category="0" type="1" extra="">
       <model>BlockEmpty</model>
-      <bool arg="0" name="Doesn't have shadow" default="true" info="" />
+      <bool arg="0" name="Disable Shadow" default="true" info="" />
     </object>
     <object id="PeraDokan" name="Wooden Pipe" category="2" type="1" extra="A wooden pipe that can be destroyed">
       <bool arg="0" name="Give coin" default="false" info="Gives a coin when destroyed" />
@@ -396,7 +450,7 @@
       <int arg="0" name="Zoom range" default="0" info="" />
       <int arg="1" name="Horizontal range" max="360" min="-360" default="80" info="" />
     </object>
-    <object id="WarpPorter" name="Mystery Box warp" category="1" type="1" extra="Sends Mario to a child warp and starts a timer of 10 seconds." />
+    <object id="WarpPorter" name="Mystery Box Warp" category="1" type="1" extra="Sends Mario to a child warp and starts a timer of 10 seconds." />
     <object id="WarpAreaPoint" name="Return Warp" category="1" type="1" extra="Is the return warp of its children ObjectChildArea, which act as entrance warps." />
     <object id="LiftGeyser" name="Seesaw Geyser" category="2" type="1" extra="Moves the seesaw up when in contact with it">
       <int arg="0" name="Height" default="0" info="Height at which waterfall should rise up" />
@@ -418,8 +472,9 @@
     </object>
     <object id="Dokan" name="Green Pipe" category="1" type="1" extra="A pipe that warps Mario to a child pipe" />
     <object id="BlockBrick" name="Brick Block" category="1" type="1" extra="">
-      <bool arg="3" name="Has snow" default="false" info="" />
-      <int arg="5" name="Shadow size" default="0" info="" />
+      <bool arg="3" name="Has Snow" default="false" info="Adds snow ontop of the block" />
+      <bool arg="4" name="Disable Shadow" default="true" info="" />
+      <int arg="5" name="Shadow size" default="0" info="Allows the item to pop out of the block" />
     </object>
     <object id="TogeMetbo" name="Prongo" category="3" type="1" extra="" />
     <object id="Bunbun" name="Boom Boom" category="3" type="1" extra="" />
@@ -441,15 +496,24 @@
       <model>WoodBox</model>
     </object>
     <object id="BlockQuestionLongFireFlower" name="Long Fire Flower Question Block" category="1" type="1" extra="A long Block that gives a Fire Flower upon being hit.">
-      <model>BlockQuestion</model>
-      <bool arg="7" name="Pop Out?" default="true" info="" />
+      <model>BlockQuestionLong</model>
+      <bool arg="3" name="Has Snow" default="true" info="Adds snow ontop of the block" />
+      <bool arg="4" name="Disable Shadow" default="true" info="" />
+      <int arg="5" name="Shadow Size" default="0" info="Determines shadow size of block." />
+      <option arg="7" name="Pop Out Direction" default="-1" info="Allows the item to pop out of the block">
+        <op name="Spawns In Front Of Block" value="-1" />
+        <op name="Pop Out In Front" value="0" />
+        <op name="Pop Out To The Right" value="1" />
+        <op name="Pop Out Behind" value="2" />
+        <op name="Pop Out To The Left" value="3" />
+      </option>
     </object>
     <object id="BlockAssistAssistItem" name="White Tanooki Block" category="1" type="1" extra="">
       <model>BlockAssist</model>
       <bool arg="0" name="Appear after 1 game over" default="true" info="Appears once you game over once" />
       <int arg="7" name="Unknown" default="0" info="" />
     </object>
-    <object id="BlockHelpPatapataWing" name="P-Wing Box" category="1" type="1" extra="">
+    <object id="BlockHelpPatapataWing" name="P-Wing Box" category="1" type="1" extra="Warps mario to the end of the level. (Requires Mario with ID of 99)">
       <model>BlockHelp</model>
       <bool arg="0" name="Appear after 2 game over" default="true" info="Appears once you game over twice" />
       <int arg="7" name="Unknown" default="0" info="" />
@@ -476,7 +540,7 @@
         <op name="Blue" value="1" />
         <op name="Yellow" value="2" />
       </option>
-      <option arg="1" name="Ring?" default="0" info="">
+      <option arg="1" name="Ring" default="0" info="">
         <op name="Soil Only" value="0" />
         <op name="Soil and Ring" value="1" />
       </option>
@@ -504,9 +568,170 @@
     <object id="KoopaLavaTruckRailStraight8M" name="LavaTrackRailStraight8M" category="1" type="1" extra="Straight track rail for bone coaster. (8M)" />
     <object id="KoopaLavaTruckRailSlope8x4M" name="LavaTrackRailSlope8x4M" category="1" type="1" extra="Sloped track rail for bone coaster. (8x4M)" />
     <object id="KoopaLastDoor" name="Last Bowser Door" category="6" type="1" extra="Door that leads to final bowser fight." />
-    <object id="JumpFlipBoard4x4" name="Flip Swap Panel (4x4)" category="1" type="1" extra="Platform that changes panels when you jump.">
+    <object id="JumpFlipBoard4x4" name="Red-Blue Panel (4x4)" category="1" type="1" extra="Platform that changes panels when you jump.">
       <model>JumpFlipBoard4x4</model>
-      <bool arg="0" name="Shadow?" default="true" info="Adds a shadow underneath platform." />
+      <bool arg="0" name="Shadow?" default="false" info="Adds a shadow underneath platform." />
+    </object>
+    <object id="NeedleBarCore" name="NeedleBarCore" category="1" type="1" extra="Block that has spike balls rotating around it.">
+      <int arg="0" name="Amount of spike balls" max="100" min="0" default="0" info="" />
+      <int arg="1" name="Chain amount?" max="100" min="0" default="-1" info="" />
+      <int arg="2" name="Speed" default="0" info="" />
+    </object>
+    <object id="WarpCubeOutOnly" name="WarpCubeOutOnly" category="1" type="1" extra="Warp Cube but disappears after exited.">
+      <model>WarpCube</model>
+    </object>
+    <object id="BlockBrickOneUp" name="1UP Brick Block" category="1" type="1" extra="">
+      <bool arg="3" name="Has Snow" default="false" info="Adds snow ontop of the block" />
+      <bool arg="4" name="Disable Shadow" default="" info="" />
+      <int arg="5" name="Shadow Size" default="0" info="Determines shadow size of block" />
+    </object>
+    <object id="Trampoline4x4M" name="Mushroom Trampoline 4x4" category="1" type="1" extra="">
+      <int arg="0" name="Jump Height" default="1" info="Changes how high mario jumps" />
+      <int arg="3" name="???" default="0" info="" />
+    </object>
+    <object id="Grass" name="Grass" category="2" type="1" extra="">
+      <model>Grass</model>
+    </object>
+    <object id="SkyNightChampionship" name="Crown Night Skybox" category="7" type="1" extra="Skybox used in Crown level." />
+    <object id="Kabehei" name="Wallop" category="3" type="1" extra="">
+      <int arg="0" name="Walk Distance" default="0" info="Distance of which Wallops will walk horizontally from the center" />
+      <bool arg="7" name="???" default="true" info="Some bool that has something to do with 45 degree rotation" />
+    </object>
+    <object id="BlockBrickBoomerangFlower" name="Boomerang Brick Block" category="1" type="1" extra="A block that gives a Boomerang Flower upon being hit.">
+      <model>BlockBrick</model>
+      <bool arg="3" name="Has Snow" default="false" info="Adds snow ontop of the block" />
+      <bool arg="4" name="Disable Shadow" default="true" info="" />
+      <int arg="5" name="Shadow size" default="0" info="Allows the item to pop out of the block" />
+      <option arg="7" name="Pop Out Direction" default="-1" info="Allows the item to pop out of the block">
+        <op name="Spawns On Top Of Block" value="-1" />
+        <op name="Pop Out In Front" value="0" />
+        <op name="Pop Out To The Right" value="1" />
+        <op name="Pop Out Behind" value="2" />
+        <op name="Pop Out To The Left" value="3" />
+      </option>
+    </object>
+    <object id="BlockBrickFireFlower" name="Fire Flower Brick Block" category="1" type="1" extra="A block that gives a Fire Flower upon being hit.">
+      <model>BlockBrick</model>
+      <bool arg="3" name="Has Snow" default="false" info="Adds snow ontop of the block" />
+      <bool arg="4" name="Disable Shadow" default="true" info="" />
+      <int arg="5" name="Shadow size" default="0" info="Allows the item to pop out of the block" />
+      <option arg="7" name="Pop Out Direction" default="-1" info="Allows the item to pop out of the block">
+        <op name="Spawns On Top Of Block" value="-1" />
+        <op name="Pop Out In Front" value="0" />
+        <op name="Pop Out To The Right" value="1" />
+        <op name="Pop Out Behind" value="2" />
+        <op name="Pop Out To The Left" value="3" />
+      </option>
+    </object>
+    <object id="BlockBrickSuperLeaf" name="Tanooki Leaf Brick Block" category="1" type="1" extra="A block that gives a Tanooki Leaf upon being hit.">
+      <model>BlockBrick</model>
+      <bool arg="3" name="Has Snow" default="false" info="Adds snow ontop of the block" />
+      <bool arg="4" name="Disable Shadow" default="true" info="" />
+      <int arg="5" name="Shadow size" default="0" info="Allows the item to pop out of the block" />
+      <option arg="7" name="Pop Out Direction" default="-1" info="Allows the item to pop out of the block">
+        <op name="Spawns On Top Of Block" value="-1" />
+        <op name="Pop Out In Front" value="0" />
+        <op name="Pop Out To The Right" value="1" />
+        <op name="Pop Out Behind" value="2" />
+        <op name="Pop Out To The Left" value="3" />
+      </option>
+    </object>
+    <object id="BlockBrickSuperStar" name="Super Star Brick Block" category="1" type="1" extra="A block that gives a Super Starf upon being hit.">
+      <model>BlockBrick</model>
+      <bool arg="3" name="Has Snow" default="false" info="Adds snow ontop of the block" />
+      <bool arg="4" name="Disable Shadow" default="true" info="" />
+      <int arg="5" name="Shadow size" default="0" info="Allows the item to pop out of the block" />
+      <option arg="7" name="Pop Out Direction" default="-1" info="Allows the item to pop out of the block">
+        <op name="Spawns On Top Of Block" value="-1" />
+        <op name="Pop Out In Front" value="0" />
+        <op name="Pop Out To The Right" value="1" />
+        <op name="Pop Out Behind" value="2" />
+        <op name="Pop Out To The Left" value="3" />
+      </option>
+    </object>
+    <object id="BlockQuestionLongSuperLeaf" name="Long Tanooki Leaf Question Block" category="1" type="1" extra="A long block that gives a Tanooki Leaf upon being hit.">
+      <model>BlockQuestionLong</model>
+      <bool arg="3" name="Has Snow" default="true" info="Adds snow ontop of the block" />
+      <bool arg="4" name="Disable Shadow" default="true" info="" />
+      <int arg="5" name="Shadow Size" default="0" info="Determines shadow size of block" />
+      <option arg="7" name="Pop Out Direction" default="-1" info="Allows the item to pop out of the block.">
+        <op name="Spawns On Top Of Block" value="-1" />
+        <op name="Pop Out In Front" value="0" />
+        <op name="Pop Out To The Right" value="1" />
+        <op name="Pop Out Behind" value="2" />
+        <op name="Pop Out To The Left" value="3" />
+      </option>
+    </object>
+    <object id="BlockQuestionLongSuperStar" name="Long Super Star Question Block_Dup" category="1" type="1" extra="A long block that gives a Super Star upon being hit.">
+      <model>BlockQuestionLong</model>
+      <bool arg="3" name="Has Snow" default="true" info="Adds snow ontop of the block" />
+      <bool arg="4" name="Disable Shadow" default="true" info="" />
+      <int arg="5" name="Shadow Size" default="0" info="Determines shadow size of block" />
+      <option arg="7" name="Pop Out Direction" default="-1" info="Allows the item to pop out of the block.">
+        <op name="Spawns On Top Of Block" value="-1" />
+        <op name="Pop Out In Front" value="0" />
+        <op name="Pop Out To The Right" value="1" />
+        <op name="Pop Out Behind" value="2" />
+        <op name="Pop Out To The Left" value="3" />
+      </option>
+    </object>
+    <object id="BlockQuestionOneUp" name="1UP Question Block" category="1" type="1" extra="A block that gives a 1UP upon being hit.">
+      <model>BlockQuestion</model>
+      <bool arg="3" name="Has Snow" default="true" info="Adds snow ontop of the block" />
+      <bool arg="4" name="Disable Shadow" default="true" info="" />
+      <int arg="5" name="Shadow Size" default="0" info="Determines shadow size of block" />
+      <option arg="7" name="Pop Out Direction" default="-1" info="Allows the item to pop out of the block.">
+        <op name="Spawns On Top Of Block" value="-1" />
+        <op name="Pop Out In Front" value="0" />
+        <op name="Pop Out To The Right" value="1" />
+        <op name="Pop Out Behind" value="2" />
+        <op name="Pop Out To The Left" value="3" />
+      </option>
+    </object>
+    <object id="BlockQuestionPoison" name="Poison Question Block" category="1" type="1" extra="A block that gives a Poison Mushroom upon being hit.">
+      <model>BlockQuestion</model>
+      <bool arg="3" name="Has Snow" default="true" info="Adds snow ontop of the block" />
+      <bool arg="4" name="Disable Shadow" default="true" info="" />
+      <int arg="5" name="Shadow Size" default="0" info="Determines shadow size of block" />
+      <option arg="7" name="Pop Out Direction" default="-1" info="Allows the item to pop out of the block.">
+        <op name="Spawns On Top Of Block" value="-1" />
+        <op name="Pop Out In Front" value="0" />
+        <op name="Pop Out To The Right" value="1" />
+        <op name="Pop Out Behind" value="2" />
+        <op name="Pop Out To The Left" value="3" />
+      </option>
+    </object>
+    <object id="BlockQuestionPropeller" name="Propeller Question Block" category="1" type="1" extra="A block that gives a Poison Mushroom upon being hit.">
+      <model>BlockQuestion</model>
+      <bool arg="3" name="Has Snow" default="true" info="Adds snow ontop of the block" />
+      <bool arg="4" name="Disable Shadow" default="true" info="" />
+      <int arg="5" name="Shadow Size" default="0" info="Determines shadow size of block" />
+      <option arg="7" name="Pop Out Direction" default="-1" info="Allows the item to pop out of the block.">
+        <op name="Spawns On Top Of Block" value="-1" />
+        <op name="Pop Out In Front" value="0" />
+        <op name="Pop Out To The Right" value="1" />
+        <op name="Pop Out Behind" value="2" />
+        <op name="Pop Out To The Left" value="3" />
+      </option>
+    </object>
+    <object id="BlockQuestionCoinInfinity" name="Infinite Coin Question Block" category="1" type="1" extra="A block that gives an infinite anount of coins upon being hit.">
+      <model>BlockQuestion</model>
+      <bool arg="3" name="Has Snow" default="false" info="Adds snow ontop of the block" />
+      <bool arg="4" name="Disable Shadow" default="false" info="" />
+      <int arg="5" name="Shadow Size" default="0" info="Determines shadow size of block." />
+    </object>
+    <object id="BlockQuestionSuperStar" name="Super Star Question Block" category="1" type="1" extra="A block that gives a Super Star upon being hit.">
+      <model>BlockQuestion</model>
+      <bool arg="3" name="Has Snow" default="true" info="Adds snow ontop of the block" />
+      <bool arg="4" name="Disable Shadow" default="true" info="" />
+      <int arg="5" name="Shadow Size" default="0" info="Determines shadow size of block" />
+      <option arg="7" name="Pop Out Direction" default="-1" info="Allows the item to pop out of the block.">
+        <op name="Spawns On Top Of Block" value="-1" />
+        <op name="Pop Out In Front" value="0" />
+        <op name="Pop Out To The Right" value="1" />
+        <op name="Pop Out Behind" value="2" />
+        <op name="Pop Out To The Left" value="3" />
+      </option>
     </object>
   </objects>
 </database>
