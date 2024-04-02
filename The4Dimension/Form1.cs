@@ -437,12 +437,19 @@ namespace The4Dimension
                     if (f.FileName.ToLower() == "stagedata.byml") StageData = f.Data;
                     else
                     {
-                        ToolStripMenuItem btn = new ToolStripMenuItem();
-                        btn.Name = "LoadFile" + index.ToString();
-                        btn.Text = f.FileName;
-                        btn.Click += LoadFileList_click;
-                        OtherFiles.Add(btn);
-                        SzsFiles.Add(f.FileName, f.Data);
+                        if (f.FileName.ToLower().Contains("fogparam"))
+                        {
+                            MessageBox.Show("This level's StageMap file includes an unused FogParam.byml, next time you save the level it will be removed.", "Warning", MessageBoxButtons.OK);
+                        }
+                        else
+                        {
+                            ToolStripMenuItem btn = new ToolStripMenuItem();
+                            btn.Name = "LoadFile" + index.ToString();
+                            btn.Text = f.FileName;
+                            btn.Click += LoadFileList_click;
+                            OtherFiles.Add(btn);
+                            SzsFiles.Add(f.FileName, f.Data);
+                        }
                     }
                     index++;
                 }
